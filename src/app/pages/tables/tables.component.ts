@@ -3,6 +3,7 @@ import { Api } from 'src/app/api';
 import { HttpClient } from '@angular/common/http';
 import { Produto } from 'src/app/produto';
 
+
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
@@ -25,7 +26,15 @@ export class TablesComponent implements OnInit {
     );
   }
 
-
+  // codigo q ativa a animacao de load
+  // const animationLoad = document.getElementById('anima');
+  // const inputLoad = document.getElementById('buscas');
+  // inputLoad.addEventListener('keyup', function(e){
+  //   var key = e.which || e.keyCode;
+  //   if (key == 13) { // codigo da tecla enter
+  //     animationLoad.style.display = 'inline-block';
+  //   }
+  // });  
 
   ngOnInit() {
   }
