@@ -25,7 +25,15 @@ export class TablesComponent implements OnInit {
     );
   }
 
-
+  // codigo q ativa a animacao de load
+  // const animationLoad = document.getElementById('anima');
+  // const inputLoad = document.getElementById('buscas');
+  // inputLoad.addEventListener('keyup', function(e){
+  //   var key = e.which || e.keyCode;
+  //   if (key == 13) { // codigo da tecla enter
+  //     animationLoad.style.display = 'inline-block';
+  //   }
+  // });  
 
   ngOnInit() {
   }

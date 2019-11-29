@@ -98,7 +98,25 @@
     <div class="col">
       <div class="card shadow">
         <div class="card-header border-0">
-          <h3 class="mb-0">Anúncios encontrados</h3>
+          <h3 class="mb-0">Parametros de Buscas:</h3>
+          <!-- Form -->
+          <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto"
+            (onsubmit)="buscar()">
+            <div class="form-group mb-0" [ngClass]="{ 'focused': focus === true }">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input id="buscas" class="form-control" placeholder="Buscar..." type="text" (focus)="focus = true"
+                  (blur)="focus = false">
+              </div>
+            </div>
+          </form>
+          <div id="anima" class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
         <div class="table-responsive">
           <table class="table align-items-center table-flush">
@@ -111,6 +129,7 @@
                 <th scope="col">Descrição</th>
                 <th scope="col">Predição</th>
                 <th scope="col">Percentual</th>
+                <th scope="col">feedback</th>
               </tr>
             </thead>
             <tbody>
@@ -125,7 +144,7 @@
                   {{produto.author}}
                 </td>
                 <td>
-                  {{produto.link}}
+                  <a href="{{produto.link}}">Link</a>
                 </td>
                 <td>
                   {{produto.description}}
@@ -135,6 +154,33 @@
                 </td>
                 <td>
                   {{produto.percentual}}%
+                </td>
+                <td>
+                  <button type="button" class="btn btn-outline-success" data-toggle="modal"
+                    data-target="#ExemploModalCentralizado">Success</button>
+                  <!-- <button type="button" class="btn btn-outline-danger" data-toggle="modal"
+                    data-target="#ExemploModalCentralizado">Error</button> -->
+                  <!-- Modal -->
+                  <div class="modal fade" id="ExemploModalCentralizado" tabindex="-1" role="dialog"
+                    aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                          <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </td>
               </tr>
             </tbody>
