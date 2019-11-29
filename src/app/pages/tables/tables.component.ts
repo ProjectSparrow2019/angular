@@ -3,6 +3,7 @@ import { Api } from 'src/app/api';
 import { HttpClient } from '@angular/common/http';
 import { Produto } from 'src/app/produto';
 
+
 @Component({
   selector: 'app-tables',
   templateUrl: './tables.component.html',
