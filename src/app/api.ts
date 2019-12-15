@@ -4,5 +4,5 @@ import { Injectable } from "@angular/core";
     providedIn: 'root'
   })
 export class Api {
-    endereco="http://157.245.211.191:8080";
+    endereco="http://localhost:8080";
 }

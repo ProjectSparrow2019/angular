@@ -18,8 +18,8 @@ export class NavbarComponent implements OnInit {
   }
 
   public nome='Roberto';
-  @Input()
-  public produto:string;
+  
+  produto_buscado:string;
 
   public resposta:string;
 
@@ -41,12 +41,15 @@ export class NavbarComponent implements OnInit {
   }
 
   buscar(){
-    this.service.request('yakuza').subscribe(
+    console.log(this.produto_buscado);
+    let prod = 'yakuza';
+    this.service.request(prod).subscribe(
       (success) => {
-        this.resposta='O produto será buscado e classificado!';
+        console.log('O produto será buscado e classificado!');
+        alert('Parabens');
       },
       (erro) => {
-
+        console.log(erro);
       }
     );
   }
