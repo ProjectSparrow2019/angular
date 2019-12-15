@@ -17,7 +17,25 @@
     <div class="col">
       <div class="card shadow">
         <div class="card-header border-0">
-          <h3 class="mb-0">Anúncios encontrados</h3>
+          <h3 class="mb-0">Parametros de Buscas:</h3>
+          <!-- Form -->
+          <form class="navbar-search navbar-search-dark form-inline mr-3 d-none d-md-flex ml-lg-auto"
+            (onsubmit)="buscar()">
+            <div class="form-group mb-0" [ngClass]="{ 'focused': focus === true }">
+              <div class="input-group input-group-alternative">
+                <div class="input-group-prepend">
+                  <span class="input-group-text"><i class="fas fa-search"></i></span>
+                </div>
+                <input id="buscas" class="form-control" placeholder="Buscar..." type="text" (focus)="focus = true"
+                  (blur)="focus = false">
+              </div>
+            </div>
+          </form>
+          <div id="anima" class="lds-facebook">
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
         </div>
         <div class="table-responsive">
           <table class="table align-items-center table-flush">
@@ -30,7 +48,11 @@
                 <th scope="col">Descrição</th>
                 <th scope="col">Predição</th>
                 <th scope="col">Percentual</th>
+<<<<<<< HEAD
                 <th scope="col">Feedback</th>
+=======
+                <th scope="col">feedback</th>
+>>>>>>> 9de198a8b90c28ad4af27d03d28294dd5fd018d8
               </tr>
             </thead>
             <tbody>
@@ -45,7 +67,11 @@
                   {{produto.author}}
                 </td>
                 <td>
+<<<<<<< HEAD
                   <a [href]="produto.link">OLX</a>
+=======
+                  <a href="{{produto.link}}">Link</a>
+>>>>>>> 9de198a8b90c28ad4af27d03d28294dd5fd018d8
                 </td>
                 <td>
                   {{produto.description}}
@@ -57,8 +83,35 @@
                   {{produto.percentual}}%
                 </td>
                 <td>
+<<<<<<< HEAD
                   <button class="btn-primary m-2">Acerto</button>
                   <button class="btn-danger">Erro</button>
+=======
+                  <button id="success" type="button" class="btn btn-outline-success">Success</button>
+                  <button type="button" class="btn btn-outline-danger">Danger</button>
+
+                  <!-- Modal -->
+                  <div class="modal fade" id="modalSucesso" tabindex="-1" role="dialog"
+                    aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="TituloModalCentralizado">Título do modal</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          ...
+                        </div>
+                        <div class="modal-footer">
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                          <button type="button" class="btn btn-primary">Salvar mudanças</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+>>>>>>> 9de198a8b90c28ad4af27d03d28294dd5fd018d8
                 </td>
               </tr>
             </tbody>
